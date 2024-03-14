@@ -1,8 +1,8 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:space_x/features/launches_page.dart';
 import 'package:space_x/state/app_state.dart';
+import 'package:space_x/utilities/routes.dart';
 
 void main() {
   final store = Store<AppState>(
@@ -13,7 +13,10 @@ void main() {
   runApp(
     StoreProvider(
       store: store,
-      child: const LaunchesPage(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: routes,
+      ),
     ),
   );
 }

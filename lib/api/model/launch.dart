@@ -8,8 +8,8 @@ part 'launch.g.dart';
 class Launch with _$Launch {
   factory Launch({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'flight_number') required int flightNumber,
-    @JsonKey(name: 'details') required String details,
+    @Default(0) @JsonKey(name: 'flight_number') int? flightNumber,
+    @Default('') @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'links') required Links links,
   }) = _Launch;
 

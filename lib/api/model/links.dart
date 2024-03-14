@@ -7,7 +7,7 @@ part 'links.g.dart';
 @freezed
 class Links with _$Links {
   factory Links({
-    @JsonKey(name: 'patch') required Patch name,
+    @JsonKey(name: 'patch') required Patch patch,
   }) = _Links;
 
   factory Links.fromJson(Map<String, dynamic> json) => _$LinksFromJson(json);
